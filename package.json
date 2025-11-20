@@ -4,7 +4,9 @@
   "description": "api de gerenciamento de produtos de um pet shop",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
   },
   "keywords": [],
   "author": "Marcelino Bom Menino",
@@ -31,6 +33,7 @@
   "dependencies": {
     "dotenv": "17.2.3",
     "fastify": "5.6.2",
+    "pg": "8.16.3",
     "zod": "4.1.12"
   }
 }
